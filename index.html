@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <script type='text/javascript' src='js/bootstrap.min.js'></script>
+    <title>Libretto Scolastico</title>
+
+  </head>
+
+  <body>   
+    <nav class='navbar navbar-default'>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button class='navbar-toggle collapse' data-toggle='collapse' data-target='#tools'>
+            <span class='glyphicon glyphicon-option-vertical'></span></button>
+          <a class='navbar-brand'>Libretto Scolastico</a>
+        </div>
+        <div id='tools' class="collapse navbar-collapse">
+          <ul class='nav navbar-nav'>
+            <li><a href='#' id='add' data-toggle='modal' data-target='#mymodal'>
+              <span class='glyphicon glyphicon-plus-sign'></span>Add</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div id='mymodal' class='modal fade' tabindex='-1' role='dialog'>
+      <div class='modal-dialog'>
+        <div class='modal-content'>
+          
+          <div class='modal-header'>
+            <h4 class='modal-title'>Aggiungi Nuovo Voto</h4>
+          </div>
+          
+          <div class='modal-body container-fluid'>
+            <form>
+              <div class="form-group">
+                <label>Materia</label>
+                <input type='text' name='materia' placeholder='Materia' class='form-control'>
+              </div>
+              
+              <div class="form-group">
+                <label>Voto</label>
+                <input type='number' name='voto' min=0 max=10 value=6 class='form-control'>
+              </div>
+              
+              <div class="form-group">
+                <label>Data</label>
+                <input type='text' name='data' placeholder='Data' class='form-control'>
+              </div>
+          </div>
+          
+          <div class="modal-footer">
+            <button data-dismiss='modal' class="btn btn-default">Annulla</button>
+            <button id='save' class='btn btn-primary'>Aggiungi</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class='container-fluid'>
+      <ul id='libretto' class="list-group">
+      </ul>
+    </div>
+    
+    <script src="app.js" defer></script>
+  </body>
+
+</html>
+
